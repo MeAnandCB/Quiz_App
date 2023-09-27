@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:quiz/utils/color_constant/color_constant.dart';
 import 'package:quiz/view/category_screen.dart';
-import 'package:quiz/view/splash_screen.dart';
 
 class Score extends StatelessWidget {
   const Score({super.key, required this.ans});

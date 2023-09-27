@@ -1,22 +1,22 @@
-class QuizQuestion {
-  final String question;
-  final List<DataBase> options;
-  final String answer;
+// class QuizQuestion {
+//   final String question;
+//   final List<DataBase> options;
+//   final String answer;
 
-  QuizQuestion({
-    required this.question,
-    required this.options,
-    required this.answer,
-  });
+//   QuizQuestion({
+//     required this.question,
+//     required this.options,
+//     required this.answer,
+//   });
 
-  factory QuizQuestion.fromJson(Map<DataBase, dynamic> json) {
-    return QuizQuestion(
-      question: json['question'],
-      options: List<DataBase>.from(json['options']),
-      answer: json['answer'],
-    );
-  }
-}
+//   factory QuizQuestion.fromJson(Map<DataBase, dynamic> json) {
+//     return QuizQuestion(
+//       question: json['question'],
+//       options: List<DataBase>.from(json['options']),
+//       answer: json['answer'],
+//     );
+//   }
+// }
 
 class DataBase {
   static List<Map<String, dynamic>> quizData = [

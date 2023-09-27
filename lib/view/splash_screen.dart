@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:quiz/utils/color_constant/color_constant.dart';
 import 'package:quiz/view/homepage.dart';
+import 'package:rive/rive.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -9,12 +10,18 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 35, 22, 5),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           SizedBox(),
-          Center(
-            child: Lottie.asset("assets/animations/quiz.json"),
+          SizedBox(
+            height: MediaQuery.of(context).size.width * .80,
+            width: MediaQuery.of(context).size.height * .80,
+            child: Center(
+              child: RiveAnimation.asset(
+                  "assets/animations/rive/5965-11570-viking-strike.riv"),
+            ),
           ),
           SizedBox(),
         ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:quiz/utils/color_constant/color_constant.dart';
 import 'package:quiz/view/score.dart';
@@ -39,8 +40,9 @@ class _HomePageState extends State<HomePage> {
                       Text(
                         "Question ?",
                         style: TextStyle(
+                            fontFamily: "poppins",
                             fontSize: 22,
-                            fontWeight: FontWeight.bold,
+                            fontWeight: FontWeight.w700,
                             height: 1.5,
                             color: ColorConstant.myWhite.withOpacity(.5)),
                         textAlign: TextAlign.left,
@@ -55,10 +57,11 @@ class _HomePageState extends State<HomePage> {
                   Center(
                     child: Text(
                       DataBase.quizData[QuesNo]['question'],
-                      style: TextStyle(
-                          fontSize: 18,
-                          height: 1.5,
-                          color: ColorConstant.myWhite),
+                      style: GoogleFonts.poppins(
+                        color: ColorConstant.myWhite,
+                        fontSize: 20,
+                        height: 1.6,
+                      ),
                       textAlign: TextAlign.left,
                     ),
                   ),
@@ -74,9 +77,10 @@ class _HomePageState extends State<HomePage> {
                           onTap: () {
                             setState(() {
                               value = index;
+                              print(value);
                               value == DataBase.quizData[QuesNo]['answer']
                                   ? rAns++
-                                  : print(value);
+                                  : print("");
                             });
                           },
                           child: Container(
